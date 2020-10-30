@@ -15,3 +15,11 @@ CREATE TABLE post (
   body TEXT NOT NULL,
   FOREIGN KEY (author_id) REFERENCES user (id)
 );
+
+CREATE TABLE review (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  author_id INTEGER NOT NULL,
+  rate INTEGER NOT NULL,
+  review TEXT NOT NULL,
+  FOREIGN KEY (author_id) REFERENCES user (id)
+);
